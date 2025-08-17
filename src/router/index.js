@@ -4,6 +4,7 @@ import store from '@/store';
 const Login = () => import('@/views/Login.vue');
 const Register = () => import('@/views/Register.vue');
 const Dashboard = () => import('@/views/Dashboard.vue');
+const Drivers = () => import('@/views/Drivers.vue');
 
 const router = createRouter({
   history: createWebHistory(),
@@ -12,6 +13,9 @@ const router = createRouter({
     { path: '/login', name: 'login', component: Login, meta: { guestOnly: true } },
     { path: '/register', name: 'register', component: Register, meta: { guestOnly: true } },
     { path: '/dashboard', name: 'dashboard', component: Dashboard, meta: { requiresAuth: true } },
+     // NEW
+    { path: '/drivers', name: 'drivers', component: Drivers, meta: { requiresAuth: true } },
+
     { path: '/:pathMatch(.*)*', redirect: '/dashboard' },
   ],
 });

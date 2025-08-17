@@ -4,6 +4,7 @@
     <div class="spacer"></div>
     <template v-if="isAuthed">
       <button class="btn" @click="go('/dashboard')">Dashboard</button>
+       <button class="btn" @click="go('/drivers')">Drivers</button>
       <button class="btn outline" @click="doLogout">Logout</button>
     </template>
     <template v-else>
